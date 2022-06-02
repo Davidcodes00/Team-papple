@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Name of the user",
       "animal": "electric eel",
-      "image": "/images/sparky.jpg",
+      "image": "/images/eel.jpg",
       "sound": "some audio file"
     },
     {}
