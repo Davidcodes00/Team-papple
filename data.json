@@ -1,13 +1,43 @@
 {
-  "death": [
+  "animals": [
     {
       "id": 1,
-      "name": "Name of the user",
-      "animal": "electric eel",
+      "name": "Duck",
+      "image": "/images/duck.jpg",
+      "sound": "some audio file"
+    
+    },
+    {
+      "id": 2,
+      "name": "Ghostbusters",
+      "image": "/images/ghostbusters.jpg",
+      "sound": "some audio file"
+    },
+    {
+      "id": 3,
+      "name": "ManBearPig",
+      "image": "/images/manbearpig.jpg",
+      "sound": "some audio file"
+    },
+    {
+      "id": 4,
+      "name": "Electric Eel",
       "image": "/images/eel.jpg",
       "sound": "some audio file"
     },
-    {}
-   
+    {
+      "id": 5,
+      "name": "Zebra in a Bad Mood",
+      "image": "/images/zebra.jpg",
+      "sound": "some audio file"
+    }
+  ],
+
+
+  "userDetails":[
+    {
+      "name": "Name of the user",
+      "lastwords": "last words"
+    }
   ]
 }
