@@ -1,11 +1,19 @@
-<div class="puppy">
-  {{!-- <img class="img-circle" src="{{image}}" alt="{{name}}"> --}}
+<div>
   <h2>you've chosen to fight {{name}}</h2>
-<img class="img-circle" src="{{image}}" alt="{{name}}">
-  
-  
-<br>
-<input type='text' placeholder="">
- <button type="submit">SEND</button>
-
+  <img class="img-circle" src="{{image}}" alt="{{name}}">
 </div>
+
+  <form class="form" action="/lastwords/{{id}}" method="post">
+    <label for="lastwords" class="form-item">
+    Any last words:
+      <input type="text" name="lastwords" value="{{lastwords}}">
+    </label>
+
+    {{!-- <label>
+      Whats your name:
+      <input type='text' name="username" value="{{username}}">
+    </label> --}}
+
+    <button type="submit">SEND</button>
+
+  </form> 
