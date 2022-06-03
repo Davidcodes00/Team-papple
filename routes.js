@@ -29,3 +29,25 @@ router.get('/:id', async (req, res) => {
     console.log(err, 'I could not find your chosen animal')
   }
 })
+
+router.post('/:id', async (req, res) => {
+  const id = req.params.id
+  try {
+    const userDetails = await fspromises.readFile(filepath, 'utf8')
+    const parsedUserDetails = JSON.parse(userDetails)
+
+    //get the data from the user array
+    const userDetailsArray = parsedUserDetails.userDetails
+    console.log('the users details:', userDetailsArray)
+    userDetailsArray.username = req.body.username
+    userDetailsArray.lastwords = req.body.lastwords
+    let updatedUserDetails = userDetailsArray
+
+    const stringData = JSON.stringify(updatedUserDetails, null, 2)
+    console.log('updated users details are:', updatedUserDetails)
+    await fspromises.writeFile(filepath, stringData, 'utf8')
+    res.redirect('/:id/fight')
+  } catch (err) {
+    console.error(err, 'I did not rewrite or redirect')
+  }
+})
