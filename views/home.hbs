@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,12 +14,12 @@
   <button>an eletric eel</button>
   <button>a zebra in a bad mood</button>
 </body>
-</html>
+</html> --}}
 
 <div class="container">
   {{#each animal}}
   <div class="animal-list">
-    <a href="/animals/{{id}}"><img class="img-circle" src="{{image}}" alt="{{sound}}"></a>
+    <a href="/animals/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
   </div>
   {{/each}}
 </div>
