@@ -1,14 +1,16 @@
 <h2>you are fighting {{name}} </h2>
 
-<img src="stick-man-1.jpg"
+{{!-- <img src="stick-man-1.jpg" --}}
 
 {{!-- <img class="img-circle" src="{{image}}" alt="{{name}}"> --}}
 
 You are up against our best figher!
 
 <div class="image">
+  you've been killed by {{name}}
   <img class="stick-man-1.jpg"src="{{image}}" alt="{{name}}">
   <p>FIGHTER</p>
-<img class="img-circle" src="{{image}}" alt="{{name}}">
-<p>OPPONENT</p>
+  {{lastwords}}
+{{!-- <img class="img-circle" src="{{image}}" alt="{{name}}">
+<p>OPPONENT</p> --}}
 </div>

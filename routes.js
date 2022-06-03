@@ -57,8 +57,29 @@ router.post('/:id', async (req, res) => {
 
     const stringData = JSON.stringify(entireArray, null, 2)
     await fspromises.writeFile(filepath, stringData, 'utf8')
-    res.redirect('/:id/fight')
+    //return res.render('fight', stringData)
+    res.redirect(`/lastwords/${id}/fight`)
   } catch (err) {
     console.error(err, 'I did not rewrite or redirect')
+  }
+})
+
+router.get('/:id/fight', async (req, res) => {
+  try {
+    //read our data
+    const animalData = await fspromises.readFile(filepath, 'utf8')
+    //parse data from string back into object
+    const parsedAnimalData = JSON.parse(animalData)
+    //console.log('parsed data', parsedAnimalData)
+    //get animals array out of the object in out data.json
+    const arrayOfAnimals = parsedAnimalData.animals
+    //now we have access to our animals array match to ID
+    let theChosenAnimal = arrayOfAnimals.find(
+      (element) => element.id === Number(req.params.id)
+    )
+    //console.log('the chosen animal', theChosenAnimal)
+    return res.render('fight', theChosenAnimal)
+  } catch (err) {
+    console.log(err, 'I could not find your chosen animal')
   }
 })
