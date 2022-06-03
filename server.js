@@ -2,6 +2,7 @@ const express = require('express')
 const hbs = require('express-handlebars')
 const fspromises = require('fs').promises
 const path = require('path')
+const animalRoutes = require('./routes')
 
 const server = express()
 
@@ -14,6 +15,7 @@ server.engine('hbs', hbs.engine({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
 
 // Your routes/router(s) should go here
+server.use('/lastwords', animalRoutes)
 
 module.exports = server
 
@@ -24,7 +26,7 @@ server.get('/', async (req, res) => {
     const viewData = await fspromises.readFile(filepath, 'utf-8')
     const parsedData = JSON.parse(viewData)
     console.log('I followed the path')
-    res.render('home', viewData)
+    res.render('home', parsedData)
   } catch (err) {
     console.log(err, 'couldnt parse data')
   }
