@@ -36,7 +36,7 @@
 
   "userDetails":[
     {
-      "name": "Name of the user",
+      "username": "Name of the user",
       "lastwords": "last words"
     }
   ]
