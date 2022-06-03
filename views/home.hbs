@@ -8,18 +8,19 @@
 </head>
 <body>
   <h1> FIGHTER WHO </h1>
-  <button>a duck</button>
+  {{!-- <button>a duck</button>
   <button>ghostbusters </button>
   <button>a manbearpig</button>
   <button>an eletric eel</button>
-  <button>a zebra in a bad mood</button>
+  <button>a zebra in a bad mood</button> --}}
+  <div class="container">
+    {{#each animals}}
+    <div class="animal-list">
+      <a href="/lastwords/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
+    </div>
+    {{/each}}
+  </div>
+
 </body>
 </html> --}}
 
-<div class="container">
-  {{#each animal}}
-  <div class="animal-list">
-    <a href="/animals/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
-  </div>
-  {{/each}}
-</div>
