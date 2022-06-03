@@ -5,7 +5,6 @@
       "name": "Duck",
       "image": "/images/duck.jpg",
       "sound": "some audio file"
-    
     },
     {
       "id": 2,
@@ -32,12 +31,7 @@
       "sound": "some audio file"
     }
   ],
-
-
-  "userDetails":[
-    {
-      "name": "Name of the user",
-      "lastwords": "last words"
-    }
-  ]
+  "userDetails": {
+    "lastwords": "bye"
+  }
 }
