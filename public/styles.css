@@ -1,5 +1,5 @@
 body {
-  background-color: #FFCCCC;
+  background-color: #81c46d;
   font-family: 'Spirax', cursive;
 }
 
@@ -14,14 +14,14 @@ body {
   flex-direction: column;
 }
 
-.puppy-list {
+.animal-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 50px;
+  align-items: left;
+  margin: 10px;
 }
 
-.puppy {
+.animal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,10 +29,10 @@ body {
 }
 
 .img-circle {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 230px;
-  height: 230px;
+  
+  width:300px;
+  height:300px;
+  object-fit:cover;
 }
 
 .title {
@@ -49,4 +49,19 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+}
+
+.yes {
+  text-align: center;
+  margin: 15%;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 35px;
+  text-align: center;
 }
