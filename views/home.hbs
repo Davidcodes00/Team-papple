@@ -15,3 +15,11 @@
   <button>a zebra in a bad mood</button>
 </body>
 </html>
+
+<div class="container">
+  {{#each animal}}
+  <div class="animal-list">
+    <a href="/animals/{{id}}"><img class="img-circle" src="{{image}}" alt="{{sound}}"></a>
+  </div>
+  {{/each}}
+</div>
